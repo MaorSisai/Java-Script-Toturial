@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title> Rock Paper Scissors </title>  <!-- Title of the page tab -->
+</head>
+
+<body>
+    <P> Rock Paper Scissors Game</P>
+
+    <!----------------------  Rock ------------------>
+    <button onclick="
+    const rundomNumR=Math.random();
+    let computerMoveR='';
+    
+    //The comouter random choosing
+    if(rundomNumR>=0 && rundomNumR<1/3){
+     computerMoveR='Rock';
+    }else if(rundomNumR>=1/3 && rundomNumR<2/3){
+     computerMoveR='Paper';
+    }else if(rundomNumR>=2/3 && rundomNumR<1){
+     computerMoveR='Scissors';}
+
+    //Printing the computer choice    
+    console.log(computerMoveR);
+
+    //Saving the outcome   
+    let resultr='';
+    if(computerMoveR==='Rock'){
+        resultr='Tie';
+    }else if(computerMoveR==='Paper'){
+        resultr='You Lose';
+    }
+    else if(computerMoveR==='Scissors'){
+        resultr='You Win';
+    }
+
+    //Printing the resultr
+    console.log(resultr);
+    alert(`You picked rock. Computer picked ${computerMoveR}. ${resultr}`);
+    "> Rock </button>
+
+
+
+    <!----------------------  Paper ------------------>
+    <button onclick="
+    const rundomNumP=Math.random();
+    let computerMoveP='';
+    
+    //The comouter random choosing
+    if(rundomNumP>=0 && rundomNumP<1/3){
+        computerMoveP='Rock';
+    }else if(rundomNumP>=1/3 && rundomNumP<2/3){
+        computerMoveP='Paper';
+    }else if(rundomNumP>=2/3 && rundomNumP<1){
+        computerMoveP='Scissors';}
+
+    //Printing the computer choice    
+    console.log(computerMoveP);
+
+    //Saving the outcome   
+    let resultP='';
+    if(computerMoveP==='Rock'){
+        resultP='You Win';
+    }else if(computerMoveP==='Paper'){
+        resultP='Tie';
+    }
+    else if(computerMoveP==='Scissors'){
+        resultP='You Lose';
+    }
+
+    //Printing the result
+    console.log(resultP);
+    alert(`You picked Paper. Computer picked ${computerMoveP}. ${resultP}`);
+    "> Paper </button>
+
+
+
+
+
+    <!----------------------  Scissors ------------------>
+    <button onclick="
+    const rundomNumS=Math.random();
+    let computerMoveS='';
+
+    //The comouter random choosing
+    if(rundomNumS>=0 && rundomNumS<1/3){
+        computerMoveS='Rock';
+    }else if(rundomNumS>=1/3 && rundomNumS<2/3){
+        computerMoveS='Paper';
+    }else if(rundomNumS>=2/3 && rundomNumS<1){
+        computerMoveS='Scissors';}
+
+    //Printing the computer choice    
+    console.log(computerMoveS);
+
+    //Saving the outcome   
+    let resultS='';
+    if(computerMoveS==='Rock'){
+        resultS='You Lose';
+    }else if(computerMoveS==='Paper'){
+        resultS='You Win';
+    }
+    else if(computerMoveS==='Scissors'){
+        resultS='Tie';
+    }
+
+    //Printing the result
+    console.log(resultS);
+    alert(`You picked Scissors. Computer picked ${computerMoveS}. ${resultS}`);
+    "> Scissors </button>
+
+  <script>
+  </script>
+</body>
+
+</html>

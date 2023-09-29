@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title> Rock Paper Scissors </title>  <!-- Title of the page tab -->
+
+     <!--
+        Like SRC for css
+        rel- the kind of file we want to use
+        href- the place where the file is located 
+       --> 
+    <link rel="stylesheet" href="10-rock-paper-scissors.css">
+
+</head>
+
+
+
+<body>
+    <P class="title"> Rock Paper Scissors Game</P>
+
+    
+
+    <!------------------------------ Rock Button ---------------------------->
+    <button class="move-button" onclick="
+
+    playGame('Rock');
+
+    //Load an image to the button, in a folder that holds all the images
+    "><img src="../images/Rock-emoji.png" class="move-icon"> </button>
+
+
+    <!------------------------------- Paper Button -------------------------->
+    <button class="move-button" onclick="
+
+    playGame('Paper');
+    
+    "><img src="../images/Paper-emoji.png" class="move-icon"></button>
+
+
+    <!------------------------------  Scissors Button ------------------------------->
+    <button class="move-button" onclick="
+
+    playGame('Scissors');
+
+    "><img src="../images/Scissors-emoji.png" class="move-icon"></button>
+
+
+
+    <!-- Spaces where I will insert the relevant data at the end of the process -->
+    <p class="js-Result Result"></p>
+
+    <p class="js-moves"></p>
+
+    <p class="js-score score"></p>
+
+
+
+
+
+    <button onclick="
+    score.wins=0; 
+    score.losses=0;
+    score.ties=0;
+
+    
+
+    localStorage.removeItem('pageScore');
+
+    
+    console.log(`All scores reset. wins: ${score.wins} , losses: ${score.losses} , ties : ${score.ties}`);
+   
+
+    updateScoreElement();
+    " class="reset-score-button">Reset</button>
+   
+
+
+
+ <script src="10-rock-paper-scissors.js"></script>
+</body>
+
+</html>

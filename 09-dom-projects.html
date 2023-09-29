@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title> Dom Projects </title>  <!-- Title of the page tab -->
+   
+</head>
+<body>
+ <p>Youtube Subscribe Button</p>
+
+ <button class="sub-Button" onclick="
+
+    subPush();
+
+ ">Subscribe</button>
+
+ <p>Amazon Shipping Calculator</p>
+ <input placeholder="Cost of order" class="js-cost-input" onkeydown="
+ handleCostkeydown(event);
+ 
+ ">
+ <button onclick="
+ 
+ calculateTotal();
+
+ ">Calculate</button>
+ <p class="js-total-cost"></p>
+
+ 
+
+
+
+    <script>
+
+        //Calculate while pressing "ENTER"
+        function handleCostkeydown(event)
+        {
+            console.log(event.key)
+            if(event.key==='Enter')
+            calculateTotal();
+        }
+   
+        //The result of pressing the calculate button 
+        function calculateTotal()
+        {
+
+            //take the *WHOLE* input element
+            const inputElement = document.querySelector('.js-cost-input');
+
+            //Extract what inside the html input bar & conver the string to a number
+            let cost = Number (inputElement.value);
+            if(cost>0 && cost<40)
+            {
+                cost+=40;
+            }
+             
+            document.querySelector('.js-total-cost').innerHTML=`$${cost}`;
+            //else if(cost>=40)
+
+            
+        }
+
+
+        function subPush(){
+
+            //Takes the **whole** button including the features and components
+            let button = document.querySelector('.sub-Button');
+            
+            //Extracts the Exat text of the button including spaces
+            let Text = button.innerHTML;
+
+            /*Extracts ONLY the text/letters of the button
+
+             let T=button.innerText; */
+
+
+            
+            if (Text === 'Subscribe') {
+                console.log(`Before the change: ${Text}`);    
+                button.innerHTML = 'Subscribed!';
+                console.log(`After the change: Subscribed!`);
+            } else if (Text === 'Subscribed!') {
+                console.log(`Before the change: ${Text}`);
+                button.innerHTML = 'Subscribe';
+                console.log(`After the change: Subscribe`);
+            }
+            
+        }
+    
+    
+
+    /*
+    //My Version
+    function subPush(){
+
+    let Text=document.querySelector('.sub-Button').innerHTML;
+    if(Text === 'Subscribe'){
+    console.log(`Before the change: ${Text}`);    
+    Text=document.querySelector('.sub-Button').innerHTML= 'Subscribed!';
+    console.log(`After the change: ${Text}`);
+    }
+    else if(Text==='Subscribed!'){
+    console.log(`Before the change: ${Text}`);
+    Text=document.querySelector('.sub-Button').innerHTML= 'Subscribe';
+    console.log(`After the change: ${Text}`);
+    }
+    
+}*/
+
+
+    </script>
+</body>
+</html>
